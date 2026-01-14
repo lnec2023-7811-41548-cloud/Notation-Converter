@@ -2,9 +2,13 @@
 Notation Converter Command Line Interface (CLI)
 # Overview
 A Command-Line Interface (CLI) tool for converting between Infix, Prefix, and Postfix notations using expression trees and stack-based algorithms. This tool accepts a mathematical expression in one of the three notations (Infix, Prefix, or Postfix) and converts it to another. It parses the expression, validates its structure, builds an expression tree if necessary, and performs the conversion based on the selected input and output formats.
+
+
 Member
 •	Lovely Neri Cena
-Description
+
+
+# Description
  
 How to Build / Compile the Project
 Prerequisites
@@ -77,7 +81,7 @@ Usage Examples
 
 ./not-conv --in postfix --out infix "8 2 + 5 3 - * 2 /"
   ( ( 8 + 2 ) * ( 5 - 3 ) ) / 2
-Design Choices & Limitations
+# Design Choices & Limitations
 Design Choices
 •	The program made use of command line arguments to get the users input for conversion. Manual memory management with an allocation of 256 was chosen for function and result string storage and dynamic memory management for constant strings [input, output, and notationCheck] and expression. The program is made up of library and user-defined functions. User-defined functions handle the section of options [help, guide] and the conversion [buildTreeFromPostfix, buildTreeFromInfix, shuntingYard]. 
 •	Prefix to Infix and Postfix
