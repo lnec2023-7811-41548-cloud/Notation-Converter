@@ -13,6 +13,7 @@ Member
 How to Build / Compile the Project
 Prerequisites
 •	GCC or any standard C compiler
+
 •	Unix/Linux terminal or Windows Command Prompt
 Build Instructions
 1.	Open your terminal and navigate to the file’s directory.
@@ -97,12 +98,15 @@ o	For postfix to prefix and infix, an expression tree based on the postfix expre
 # Known Limitations
 The notation converter is limited from the following:
 •	Only handles single digit operands (0 - 9 ) and MDAS operators (+ - * /)
-•	
+
 •	Generalized error handling on malformed expressions and commands with less than 5 arguments 
 # Language & Dependencies
 Programming Language
+
 •	C (C99 Standard)
 # Dependencies
 •	String.h
+
 •	Stdlib.h
+
 •	Ctype.h
