@@ -82,23 +82,27 @@ Usage Examples
 ./not-conv --in postfix --out infix "8 2 + 5 3 - * 2 /"
   ( ( 8 + 2 ) * ( 5 - 3 ) ) / 2
 # Design Choices & Limitations
-Design Choices
+# Design Choices
 •	The program made use of command line arguments to get the users input for conversion. Manual memory management with an allocation of 256 was chosen for function and result string storage and dynamic memory management for constant strings [input, output, and notationCheck] and expression. The program is made up of library and user-defined functions. User-defined functions handle the section of options [help, guide] and the conversion [buildTreeFromPostfix, buildTreeFromInfix, shuntingYard]. 
+
 •	Prefix to Infix and Postfix
 o	In converting prefix notations to Infix, the spaces between the operators and operands are removed first, then an expression tree is built from prefix, which is then traversed in inorder. In terms of prefix to postfix, the similar expression tree is traversed postorder.
+
 •	Infix to Prefix 
 o	In converting infix to postfix, a shunting yard algorithm was used. The goal of the shunting yard was to make use of stacks to convert an infix expression into postfix. In converting to prefix, a shunting yard algorithm was also used, then the postfix expression formed has its spaces removed for making an expression tree. The expression tree is traversed in preorder to obtain the prefix notation. 
+
 •	Postfix to Prefix 
 o	For postfix to prefix and infix, an expression tree based on the postfix expression was built after removing the spaces in between. And it was traversed in preorder to obtain the prefix notation or inorder for infix notation.
-Known Limitations
+
+# Known Limitations
 The notation converter is limited from the following:
 •	Only handles single digit operands (0 - 9 ) and MDAS operators (+ - * /)
 •	
 •	Generalized error handling on malformed expressions and commands with less than 5 arguments 
-Language & Dependencies
+# Language & Dependencies
 Programming Language
 •	C (C99 Standard)
-Dependencies
+# Dependencies
 •	String.h
 •	Stdlib.h
 •	Ctype.h
